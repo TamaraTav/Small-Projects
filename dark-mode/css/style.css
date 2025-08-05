@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+}
+/*  */
+body.dark {
+    background-color: black;
+    color: white;
+}
+body.dark .cont h1 {
+    color: blueviolet;
+}
+/*  */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+header h2 {
+    cursor: pointer;
+}
+/*  */
+
+.cont {
+    max-width: 500px;
+}
