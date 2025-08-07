@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+        .rocket, .go {
+            position: absolute;
+            bottom: 20px;
+        }
+        .rocket {
+            width: 300px;
+            left: 20px;
+        }
+        .go {
+            cursor: pointer;
+            width: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .rocket.start {
+            animation-name: fly;
+            animation-duration: 2s;
+        }
+        @keyframes fly {
+            from {}
+            to {
+                transform: translate(100vw,-100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="racket-place">
+    <img src="img/rocket.gif" class="rocket">
+    <img src="img/go.png" class="go" onclick="startFly()">
+</div>
+</body>
+<script>
+    function startFly() {
+        const racket = document.querySelector(".rocket")
+        racket.classList.add('start')
+
+        setTimeout(()=>{
+            racket.classList.remove('start')
+        },2000)
+    }
+</script>
+</html>
