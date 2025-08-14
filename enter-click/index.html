@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" onkeydown="rame(this)">
+
+<script>
+    function rame(el) {
+        console.log(event.keyCode);
+
+        if(event.keyCode === 13) {
+            //13 არის ენტერის კოდი
+            alert("თქვენ დააჭირეთ ენთერს")
+        }
+        if(event.keyCode === 46) {
+            //46 არის delete-ის კოდი
+            el.value = null
+        }
+    }
+</script>
+</body>
+</html>
